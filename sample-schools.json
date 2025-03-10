@@ -1,0 +1,32 @@
+[
+  {
+    "name": "St. Mary's High School",
+    "address": "123 Education Street, Mumbai, Maharashtra",
+    "latitude": 19.0760,
+    "longitude": 72.8777
+  },
+  {
+    "name": "Delhi Public School",
+    "address": "456 Learning Road, New Delhi",
+    "latitude": 28.6139,
+    "longitude": 77.2090
+  },
+  {
+    "name": "Bangalore International School",
+    "address": "789 Knowledge Avenue, Bangalore, Karnataka",
+    "latitude": 12.9716,
+    "longitude": 77.5946
+  },
+  {
+    "name": "Chennai Modern School",
+    "address": "321 Wisdom Lane, Chennai, Tamil Nadu",
+    "latitude": 13.0827,
+    "longitude": 80.2707
+  },
+  {
+    "name": "Kolkata Grammar School",
+    "address": "654 Scholar Road, Kolkata, West Bengal",
+    "latitude": 22.5726,
+    "longitude": 88.3639
+  }
+]
