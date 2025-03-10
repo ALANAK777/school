@@ -11,6 +11,16 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Add database connection check
+db.getConnection()
+  .then(connection => {
+    console.log('Database connected successfully');
+    connection.release();
+  })
+  .catch(error => {
+    console.error('Error connecting to the database:', error);
+  });
+
 // Helper function to calculate distance between two points using Haversine formula
 function calculateDistance(lat1, lon1, lat2, lon2) {
   const R = 6371; // Earth's radius in kilometers
@@ -94,6 +104,11 @@ app.get('/listSchools', async (req, res) => {
     console.error('Error fetching schools:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+});
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK', message: 'Server is running' });
 });
 
 // Start server
